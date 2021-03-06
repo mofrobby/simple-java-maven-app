@@ -3,6 +3,6 @@ node {
        git 'https://github.com/mofrobby/simple-java-maven-app'
     }
     stage('Compile-Package'){
-        sh 'mvn package'
+        bat 'mvn package'
     }
 }
