@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-    maven 'C:\Program Files\apache-maven-3.6.3'
+    maven 'maven-3.6.3'
   }
     stages {
         stage ('Initialize') {
