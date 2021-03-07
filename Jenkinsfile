@@ -1,8 +1,11 @@
-node {
-    stage('SCM Checkout'){
-       git 'https://github.com/mofrobby/simple-java-maven-app'
+pipeline {
+    agent { docker { image 'maven:3.3.3' } }
+      stages {
+        stage('log version info') {
+      steps {
+        sh 'mvn --version'
+        sh 'mvn clean install'
+      }
     }
-    stage('Compile-Package'){
-        bat 'mvn package'
-    }
+  }
 }
